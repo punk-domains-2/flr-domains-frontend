@@ -266,7 +266,7 @@
       <!-- END TLD: transferOwnership -->
 
       <!-- Minter: ownerFreeMint -->
-      <div v-if="isUserTldAdmin">
+      <div v-if="isUserMinterAdmin">
         <h3>Minter contract: mint a domain for free</h3>
 
         <p>The owner of the Minter contract can mint a domain for free.</p>
@@ -309,7 +309,7 @@
 
         <hr />
       </div>
-      <!-- END TLD: transferOwnership -->
+      <!-- END Minter: ownerFreeMint -->
 
     </div>
   </div>
