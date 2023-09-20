@@ -16,7 +16,7 @@
 
           <div class="navbar-menu-buttons">
 
-            <div v-if="isActivated" class="btn-group me-3 navbar-menu-btn">
+            <div v-if="isActivated" class="btn-group ms-3 navbar-menu-btn">
               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 {{getNetworkName}}
               </button>
@@ -32,7 +32,7 @@
               </ul>
             </div>
 
-            <div v-if="isActivated" class="btn-group me-3 navbar-menu-btn">
+            <div v-if="isActivated" class="btn-group ms-3 navbar-menu-btn">
               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                 {{ getNameOrAddress }}
               </button>
@@ -48,17 +48,23 @@
               </ul>
             </div>
 
-            <button v-if="!isActivated" class="btn btn-primary navbar-menu-btn me-3" @click="open">Connect wallet</button>
+            <button v-if="!isActivated" class="btn btn-primary navbar-menu-btn ms-3" @click="open">Connect wallet</button>
 
             <a 
-              class="btn btn-primary me-3 navbar-menu-btn" 
+              class="btn btn-primary ms-3 navbar-menu-btn" 
               href="https://sparklesnft.com/collection/flare/flrdomains/" 
               target="_blank"
             >Marketplace</a>
 
-            <div v-if="isActivated" class="btn-group me-3 navbar-menu-btn">
+            <div v-if="isActivated" class="btn-group ms-3 navbar-menu-btn">
               <router-link tag="button" class="btn btn-primary" to="/send-tokens">Send Tokens</router-link>
             </div>
+
+            <a 
+              class="btn btn-primary ms-3 navbar-menu-btn" 
+              href="https://flr.chat/" 
+              target="_blank"
+            >Chat</a>
           </div>
         </div>
 
