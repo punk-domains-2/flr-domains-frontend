@@ -25,11 +25,6 @@
               <small class="text-center text-muted">Bifrost</small>
             </div> 
 
-            <div class="card col-6 cursor-pointer wallet-img-wrapper" @click="connectWalletConnect">
-              <img src="./assets/wallets/wc.png" class="card-img-top card-img-wallet" alt="Wallet Connect">
-              <small class="text-center text-muted">WalletConnect</small>
-            </div>
-
             <div class="card col-6 cursor-pointer wallet-img-wrapper" @click="connectMetaMask">
               <img src="./assets/wallets/rabby.png" class="card-img-top card-img-wallet" alt="Rabby">
               <small class="text-center text-muted">Rabby</small>
@@ -40,10 +35,20 @@
               <small class="text-center text-muted">Brave</small>
             </div>
 
-            <!--
+            <div class="card col-6 cursor-pointer wallet-img-wrapper" @click="connectMetaMask">
+              <img src="./assets/wallets/zerion.png" class="card-img-top card-img-wallet" alt="Zerion">
+              <small class="text-center text-muted">Zerion</small>
+            </div>
+
             <div class="card col-6 cursor-pointer wallet-img-wrapper" @click="connectCoinbase">
               <img src="./assets/wallets/coinbase.png" class="card-img-top card-img-wallet" alt="Coinbase">
               <small class="text-center text-muted">Coinbase</small>
+            </div>
+
+            <!--
+            <div class="card col-6 cursor-pointer wallet-img-wrapper" @click="connectWalletConnect">
+              <img src="./assets/wallets/wc.png" class="card-img-top card-img-wallet" alt="Wallet Connect">
+              <small class="text-center text-muted">WalletConnect</small>
             </div>
 
             <div class="card col-6 cursor-pointer wallet-img-wrapper" @click="connectWalletConnect">
@@ -201,7 +206,7 @@ export default {
 		});
 
 		const mmConnector = new MetaMaskConnector({
-			appUrl: "Flare Domains",
+			appUrl: "https://flr.domains/",
 		});
 
     // wallet connect v2
