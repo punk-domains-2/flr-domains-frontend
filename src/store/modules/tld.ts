@@ -15,15 +15,15 @@ export default {
     tldContract: null,
     tldChainId: 14,
     tldChainName: "Flare",
-    minterAddress: "0x9EA937E644bBa692724a6a4aCD08CA74d32eC47a", // TODO
+    minterAddress: "0x6b1d3F8612ffd9d9FfA48229F7137eF18F479454", // TODO
     minterContract: null,
     minterLoadingData: false,
     minterPaused: true,
-    minterTldPrice1: 19999,
-    minterTldPrice2: 9999,
-    minterTldPrice3: 3999,
-    minterTldPrice4: 599,
-    minterTldPrice5: 299
+    minterTldPrice1: 149035,
+    minterTldPrice2: 46817,
+    minterTldPrice3: 7690,
+    minterTldPrice4: 780,
+    minterTldPrice5: 111
   }),
 
   getters: { 
