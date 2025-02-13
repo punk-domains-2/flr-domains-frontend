@@ -15,7 +15,7 @@ export default {
     tldContract: null,
     tldChainId: 14,
     tldChainName: "Flare",
-    minterAddress: "0x6b1d3F8612ffd9d9FfA48229F7137eF18F479454", // TODO
+    minterAddress: "0x30E89295b9C73Ee9A74003FbcAAd67054434330F", // TODO
     minterContract: null,
     minterLoadingData: false,
     minterPaused: true,
