@@ -12,6 +12,7 @@ import ProfileSendTokens from './views/ProfileSendTokens.vue'
 import SearchDomains from './views/SearchDomains.vue'
 import SendTokens from './views/SendTokens.vue'
 import TransferDomain from './views/TransferDomain.vue'
+import AnotherChain from './views/AnotherChain.vue'
 
 // For info on using Vue Router with the Composition API, see https://next.router.vuejs.org/guide/advanced/composition-api.html
 
@@ -40,6 +41,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/browser',
     name: 'BrowserExtension',
     component: BrowserExtension,
+  },
+  {
+    path: '/data-connector',
+    name: 'AnotherChain',
+    component: AnotherChain,
   },
   {
     path: '/domain/:domainChain/:tld/:domainName',

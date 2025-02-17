@@ -41,6 +41,7 @@
                 <router-link tag="li" class="dropdown-item" to="/">Buy domain</router-link>
                 <router-link tag="li" class="dropdown-item" to="/search-domain">Search domain</router-link>
                 <router-link tag="li" class="dropdown-item" to="/send-tokens">Send tokens</router-link>
+                <router-link tag="li" class="dropdown-item" to="/data-connector">Buy on another chain</router-link>
                 <router-link tag="li" class="dropdown-item" to="/about">About</router-link>
                 <!-- <router-link tag="li" class="dropdown-item" to="/browser">Browser extension</router-link> -->
                 <li class="dropdown-item" @click="openUrl('https://docs.punk.domains/')">Docs</li>
