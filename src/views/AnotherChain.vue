@@ -18,11 +18,17 @@
 
       <div class="row mt-2">
         <div class="col-md-6 offset-md-3">
-          <input 
-            v-model="domainName"
-            class="form-control text-center border-2 border-light"
-            placeholder="Enter a domain name"
-          >
+          <div class="input-group">
+            <input 
+              v-model="domainName"
+              class="form-control text-center border-2 border-light"
+              placeholder="Enter a domain name"
+            >
+            <button class="btn btn-primary" type="button" @click="checkDomainAvailability" :disabled="waitingCheck">
+              <span v-if="waitingCheck" class="spinner-border spinner-border-sm mx-1" role="status" aria-hidden="true"></span>
+              <span>Check</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -66,11 +72,17 @@
 
       <div class="row mt-3">
         <div class="col-md-6 offset-md-3">
-          <input 
-            v-model="domainName"
-            class="form-control text-center border-2 border-light"
-            placeholder="Enter a domain name"
-          >
+          <div class="input-group">
+            <input 
+              v-model="domainName"
+              class="form-control text-center border-2 border-light"
+              placeholder="Enter a domain name"
+            >
+            <button class="btn btn-primary" type="button" @click="checkDomainAvailability" :disabled="waitingCheck">
+              <span v-if="waitingCheck" class="spinner-border spinner-border-sm mx-1" role="status" aria-hidden="true"></span>
+              <span>Check</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -103,6 +115,7 @@ import axios from "axios"
 import { ethers } from "ethers"
 import { useEthers } from 'vue-dapp';
 import { useToast, TYPE } from "vue-toastification";
+import { mapGetters } from "vuex";
 
 export default {
   name: "AnotherChain",
@@ -131,6 +144,7 @@ export default {
       errorMessage: null,
       successMessage: null,
       txHash: "",
+      waitingCheck: false,
       waitingMint: false,
     }
   },
@@ -141,6 +155,8 @@ export default {
   },
 
   computed: {
+    ...mapGetters("tld", ["getTldContract"]),
+
     blockExplorerUrl() {
       if (this.chains && this.blockchain in this.chains) {
         return this.chains[this.blockchain].blockExplorerUrl
@@ -183,6 +199,23 @@ export default {
   },
 
   methods: {
+    async checkDomainAvailability() {
+      this.waitingCheck = true
+
+      if (this.address && this.domainName) {
+        const domainLowerCase = this.domainName.toLowerCase().replace(/\s+/g, "")
+        const existingHolder = await this.getTldContract.getDomainHolder(domainLowerCase)
+
+        if (existingHolder !== ethers.constants.AddressZero) {
+          this.toast(`Domain ${this.domainName} is already taken. Please choose another one.`, { type: TYPE.ERROR })
+        } else {
+          this.toast(`Domain ${this.domainName} is available. You can proceed with the next step.`, { type: TYPE.SUCCESS })
+        }
+      }
+
+      this.waitingCheck = false
+    },
+
     async fetchDomainPrices() {
       const response = await axios.get(`${this.apiBaseUrl}/domain-prices`)
       this.chains = response.data
