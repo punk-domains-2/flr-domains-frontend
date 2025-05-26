@@ -53,19 +53,21 @@
 
             <a 
               class="btn btn-primary ms-3 navbar-menu-btn" 
-              href="https://sparklesnft.com/collection/flare/flrdomains/" 
+              href="https://xhaven.io/collection/flare/flrdomains/" 
               target="_blank"
             >Marketplace</a>
 
+            <!--
             <div v-if="isActivated" class="btn-group ms-3 navbar-menu-btn">
               <router-link tag="button" class="btn btn-primary" to="/send-tokens">Send Tokens</router-link>
             </div>
+            -->
 
             <a 
               class="btn btn-primary ms-3 navbar-menu-btn" 
               href="https://flr.chat/" 
               target="_blank"
-            >Chat</a>
+            >Flare Chat</a>
           </div>
         </div>
 

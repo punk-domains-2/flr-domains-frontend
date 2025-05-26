@@ -9,18 +9,18 @@
       </p>
 
       <p>
-        The first available domain extension is the <code>.flr</code> extension, which allows for one-time purchase domains 
-        that never expire.
+        You can register a domain name with the <code>.flr</code> extension, for example <code>myname.flr</code>.
       </p>
 
       <p>
-        The <code>.flr</code> domain is just the first step of bringing Web3 Social into the Flare community. 
-        Over the course of the next 6 months we will be building and revealing new utilities and usecases for Flare Domains, 
-        and onboarding various kinds of integration partners.
+        Your <code>.flr</code> name acts as your username across the Flare ecosystem. 
+        You can use it to send tokens to other users, or as 
+        your handle on a decentralized chat app called <a href="https://flr.chat" target="_blank">FLR.chat</a>.
       </p>
 
       <p>
-        Exciting times ahead of us. Stay tuned...
+        Flare domains are also supported in the <a href="https://bifrostwallet.com/" target="_blank">Bifrost Mobile Wallet</a>, 
+        the official wallet of the Flare network.
       </p>
 
     </div>

@@ -4,6 +4,7 @@
 
     <div class="text-align-header mt-3">
       <h1>Get your <span class="punchline-domain">{{getTldName}}</span> web3 name</h1>
+      <p class="mt-3">And use it as username on <a href="https://flr.chat" target="_blank">FLR.chat</a>!</p>
     </div>
 
     <div class="d-flex justify-content-center domain-input-container mb-3 mt-5">
